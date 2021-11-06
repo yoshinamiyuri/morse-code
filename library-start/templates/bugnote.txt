@@ -1,0 +1,59 @@
+index
+
+
+GETの時は、urlを見ただけで、何をしようとしているか分からないといけない。だから引数がひつ
+<a href="{{ url_for('edit', id=book['id']) }}">
+
+POSTの時は、広く口を作っておく（情報がきたものを登録する）
+
+<li>{{ book["id"] }} - {{ book["title"] }} - {{ book["author"] }} - {{ book["rating"] }}/10 - <a href="{{ url_for('edit', id=book['id']) }}">Edit rating</a></li>
+
+
+
+---------------------
+メモ
+
+①@app.route("/edit", methods=['GET']) ーーーークエリ（検索画面では使用される）&静的でOK（フロントで取得しやすい）フロントだけでも動く。クエリ文字列は、基本のページは同じ。queryが違うだけ。GET、POST可能
+
+
+②@app.route("/edit/<id>", methods=['GET']　ーーーーサーバサイドが必要（URLによって、表示するページが変わる）。GET、POST可能 。
+ページを要求する（html）。情報を取得する（json）　--->GET
+命令を要求する --->（POST/DELETE）
+
+
+
+
+①http://127.0.0.1:5000/edit?id=1　←request.args で、クエリ文字列（?以降）を取得する
+②http://127.0.0.1:5000/edit/i　　　 ←idを直接URLに含める
+
+request.args は URL パラメータ (/login?next=〜 みたいなやつ) を取得するもののようですね。
+で、その URL は flask_login.login_url で作られて、その next_url 引数で指定できるってことだと思います。
+
+https://teratail.com/questions/328055
+
+---------------------
+
+オブジェクト関係マッピング（英: Object-relational mapping、O/RM、ORM）とは、
+データベースとオブジェクト指向プログラミング言語の間の非互換なデータを変換するプログラミング技法である。
+オブジェクト関連マッピングとも呼ぶ。実際には、オブジェクト指向言語から使える「仮想」オブジェクトデータベースを構築する手法である。
+オブジェクト関係マッピングを行うソフトウェアパッケージは商用のものもフリーなものもあるが、場合によっては独自に開発することもある。
+
+---------------------
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got '='
+
+
+    <ul>
+    {% for book in all_books: %}
+        <li><form action="{{ url_for('home'), id=book['id'] }}" method="DELETE">
+                <a href="{{ url_for('home', id=book['id']) }}">Delete</a>
+            </form>
+            {{ book["id"] }} - {{ book["title"] }} - {{ book["author"] }} - {{ book["rating"] }}/10 - <a href="{{ url_for('edit', id=book['id']) }}">Edit rating</a></li>
+    {% endfor %}
+    </ul>
+
+
+---------------------
+
+    https://coffee-blue-mountain.com/python-flask-sqlalchemy-delete-method/
+
+    https://qiita.com/xecus/items/b437513cbb9f0e1aa87a

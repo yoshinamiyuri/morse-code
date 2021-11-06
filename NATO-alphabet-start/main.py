@@ -11,17 +11,23 @@ phonetic_dict = {row.letter: row.code for (index, row) in alpha_data_frame.iterr
 screen = turtle.Screen()
 screen.title("電話の時に、自分の名前の伝え方")
 
-again = True
-while again:
-    user_name = screen.textinput(title=f"Your name:",
-                                 prompt="What's your name? ").upper()
-    try:
-        output_list = [phonetic_dict[char] for char in user_name]
-    except KeyError:
-        print("Sorry, only letters in the alphabet please.")
-    else:
-        print(output_list)
-        again = False
+
+def name(al_dict):
+    # again = True
+    # while again:
+    while True:
+        user_name = screen.textinput(title=f"Your name:",
+                                     prompt="What's your name? ").upper()
+        try:
+            output_list = [al_dict[char] for char in user_name]
+        except KeyError:
+            print("Sorry, only letters in the alphabet please.")
+        else:
+            print(output_list)
+            # again = False
+            return #whileぶん抜けている　ここで終われるはずなのに、27行目を書いていたら、17行目で終わることになる
+
+name(phonetic_dict)
 
 
 

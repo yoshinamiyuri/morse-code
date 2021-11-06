@@ -1,0 +1,64 @@
+-----------------------------------------------------------------
+⭐️Python クラスについて
+https://qiita.com/motoki1990/items/376fc1d1f3d59c960f5c?fbclid=IwAR2z_bYHQZwSgjWqnNxSsBVobo5sKHEwKbbcT6L7i--V00SFP_4tb9s4Sh8
+-----------------------------------------------------------------
+Why are there no PUT and DELETE methods on HTML forms?
+
+https://softwareengineering.stackexchange.com/questions/114156/why-are-there-no-put-and-delete-methods-on-html-forms
+-----------------------------------------------------------------
+
+
+
+get table columns from sqlAlchemy table model
+https://stackoverflow.com/questions/24959589/get-table-columns-from-sqlalchemy-table-model
+
+How to get column and values dictionary in SQLAlchemy model?
+https://stackoverflow.com/questions/28746136/how-to-get-column-and-values-dictionary-in-sqlalchemy-model
+
+SQLAlchemyでクラスオブジェクトを辞書型(dictionary)に変換する方法
+https://qiita.com/hayashi-ay/items/4dc431003e7866d2aff8
+
+
+jsonify
+https://www.kite.com/python/docs/flask.jsonify
+
+https://realpython.com/lessons/serializing-json-data/
+
+attribute sqlalchemy.schema.Table.columns¶
+https://docs.sqlalchemy.org/en/13/orm/extensions/declarative/basic_use.html
+https://docs.sqlalchemy.org/en/13/core/metadata.html#sqlalchemy.schema.Table
+
+
+----------------------
+
+GETパラメータ(クエリ文字列)の取得 †
+https://www.magata.net/memo/index.php?Flask%A4%CE%B4%F0%C1%C3#s1cf4824
+
+
+Flaskでpostを受け取る：パラメーターはrequest.form.getで取得する
+https://www.mathpython.com/ja/flask-post/
+
+
+----------------------
+ifで条件分岐したリスト内包表記
+
+    target_city_cafes_object = [cafe for cafe in  all_cafes if cafe.to_dict()["location"] == location]
+
+    # for cafe in all_cafes:
+    #     if cafe.to_dict()["location"] == location:
+    #         print(cafe.to_dict())
+    #         print(cafe)
+    #         target_city_cafes_object.append(cafe)
+    #         # target_city_cafes[cafe] = cafe.to_dict()
+
+
+
+----------------------
+@app.route("/search")
+def get_cafe_at_location():
+    query_location = request.args.get("loc")
+    cafe = db.session.query(Cafe).filter_by(location=query_location).first()
+    if cafe:
+        return jsonify(cafe=cafe.to_dict())
+    else:
+        return jsonify(error={"Not Found": "Sorry, we don't have a cafe at that location."})

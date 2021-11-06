@@ -1,0 +1,16 @@
+Moving the Database Out of the Main Code Body
+https://gist.github.com/angelabauer/eff89874dfbda23ac3ac1c51c618b6e1
+
+-------------------------
+ボタンの色の変更方法
+form_field(submit_button, button_map={'submit_button': 'primary'})
+https://stackoverflow.com/questions/39737970/meaning-of-button-map-in-the-form-field-definition-in-flask-bootstrap
+
+-------------------------
+変数単位でエスケープを無効化する
+ビルトインフィルターのsafeフィルターを使用します。
+https://tanuhack.com/jinja2-block/
+
+To apply a Jinja filter, you need the pipe symbol "|" and this goes between the Jinja expression and Jinja filter.
+e.g. {{Jinja expression | Jinja filter }}
+ -------------------------
