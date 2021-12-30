@@ -1,0 +1,43 @@
+https://docs.python.org/3.9/library/tkinter.html#tkinter.Canvas.create_image
+https://watermarkly.com/#app
+
+
+https://www.geeksforgeeks.org/how-to-resize-image-in-python-tkinter/
+https://www.geeksforgeeks.org/setting-the-position-of-tkinter-labels/
+https://teratail.com/questions/286627
+https://stackoverflow.com/questions/6548837/how-do-i-get-an-event-callback-when-a-tkinter-entry-widget-is-modified
+https://qiita.com/ab-boy_ringo/items/51242a3150365ec81106
+https://imagingsolution.net/category/program/python/pillow/
+https://imagingsolution.net/program/python/tkinter/python_tkinter_image_viewer/
+https://www.askpython.com/python-modules/tkinter/stringvar-with-examples
+https://www.geeksforgeeks.org/python-setting-and-retrieving-values-of-tkinter-variable/
+https://tsukisuke.hateblo.jp/entry/2020/02/22/183242
+https://www.python-beginners.com/entry/20210522/1621616008
+https://www.javatpoint.com/python-tkinter-entry
+https://www.pytry3g.com/entry/2018/02/09/124143#%E7%94%BB%E5%83%8F%E3%82%92%E8%B2%BC%E3%82%8B%E3%83%BCcreate_image
+
+
+----------------------------
+Using what you have learnt about Tkinter, you will create a desktop application with a Graphical User
+Interface (GUI) where you can upload an image and use Python to add a watermark logo/text.
+Normally, you would have to use an image editing software like Photoshop to add the watermark,
+but your program is going to do it automatically.
+
+Use case: e.g you want to start posting your photos to Instagram but you want to add your website
+to all the photos, you can now use your software to add your website/logo automatically to any image.
+A similar online service is: https://watermarkly.com/
+
+You might need:
+https://pypi.org/project/Pillow/
+https://docs.python.org/3/library/tkinter.html
+and some Googling.
+
+Questions for this assignment
+Reflection Time:
+This is a place to journal your experience of completing this project.
+This will help you figure out how to improve as a developer.
+Write down how you approached the project. What was hard, what was easy. How might you improve
+for the next project? What was your biggest learning from today? What would you do differently
+if you were to tackle this project again?
+----------------------------
+

@@ -1,16 +1,21 @@
-# This is a sample Python script.
+MORSE_CODE = {'A': '.-', 'B': '-...', 'C': '−·−·', 'D': '−··', 'E': '·', 'F': '··−·',
+              'G': '−−·', 'H': '....', 'I': '..', 'J': '.---', 'K': '-.-',
+              'L': '.-..', 'M': '--', 'N': '-.', 'O': '---', 'P': '.--.', 'Q': '--.-',
+              'R': '.-.', 'S': '...', 'T': '-', 'U': '..-', 'V': '...-', 'W': '.--',
+              'X': '-..-', 'Y': '-.--', 'Z': '--..', '.': '.-.-.-',
+              '?': '..--..', '.': '·−·−·−'}
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+SPACE_MORSE = {' ': '.......'}
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+def change_to_morse():
+    #一文字ずつ、空白あける
+    user_input = input("Enter a string: ").upper()
+    user_input = ' '.join(user_input)
+    morse_code = user_input.translate(str.maketrans(MORSE_CODE))
+    moser_code_space = morse_code.translate(str.maketrans(SPACE_MORSE))
+    return morse_code
+
+print(change_to_morse())
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/

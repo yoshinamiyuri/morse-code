@@ -1,0 +1,27 @@
+Questions for this assignment
+Reflection Time:
+This is a place to journal your experience of completing this project.
+This will help you figure out how to improve as a developer.
+--------------------------------------------------------------
+
+1.Write down how you approached the project.
+I reviewed ths input method from day 10.
+https://replit.com/@yoshinamiyuri/day-10-1-solution#main.py
+
+I checked how to convert each character into morse code and found two ways, replace and translate.
+I chose translate method because it used the dictionary style and was easy to use in this case.
+https://note.nkmk.me/python-str-replace-translate-re-sub/
+
+2.What was hard, what was easy.
+Hard
+->各文字の間に、（モールス信号でない）スペースを入れること。
+　かつ、モールス信号に変更後に、ユーザが意図した（単語間の）スペースを、モールス信号のスペースに変換すること
+
+3.How might you improve for the next project?
+モールス信号から、文字に変換できるようにする
+
+4. What was your biggest learning from today?
+translate method
+
+5.What would you do differently if you were to tackle this project again?
+replace methodを使ってみる
